@@ -19,7 +19,7 @@ The app also has a time management feature for important things such as medical 
 <br>
 <hr>
 
-## Video Proof
+## photo Proof
 
 This shows that I completed the second task and finished all levels of CSS Diner.
 
