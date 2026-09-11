@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+                
+        .second_part{
+            position: relative;
+            margin-top: 10px;
+            height: 285px;
+        }
+
+        .second_part > div{
+            border: 1px solid black;
+            border-radius: 1.5px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            color: whitesmoke;
+        }
+
+        .second_part .one {
+            background-color: blue;
+            z-index: 1;
+        }
+
+        .second_part .two{
+            background-color: red;
+            z-index: 2;
+            top: 25px;
+            left: 25px;
+        }
+
+        .second_part .three{
+            background-color: yellow;
+            z-index: 3;
+            top: 55px;
+            left: 55px;
+        }
+
+        .second_part .four{
+            background-color: green;
+            z-index: 4;
+            top: 85px;
+            left: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="second_part">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+</body>
+</html>

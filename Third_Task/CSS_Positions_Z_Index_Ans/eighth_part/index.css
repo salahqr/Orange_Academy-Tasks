@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+h1 {
+    color: orange;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+header div {
+    background-color: darkgray;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+header div img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+header div nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+}
+
+header div nav ul li a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+header div nav ul li a:hover {
+    color: aqua;
+    transition: 0.3s;
+}
+
+
+#about {
+    background-image: url("../../assets/close_up_professional_food_photography_of_an_artisanal_gourmet_beef_burger_with.png");
+
+    width: 100%;
+    min-height: 500px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+#about h2 {
+    color: black;
+    text-align: center;
+}
+
+#about > button {
+    padding: 10px 20px;
+    border: none;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#about > div {
+    display: flex;
+    gap: 20px;
+}
+
+
+.food-card {
+    position: relative;
+
+    display: block;
+
+    width: 180px;
+    height: 130px;
+
+    text-decoration: none;
+    color: black;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.food-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.food-card h3 {
+    position: absolute;
+
+    bottom: 10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 80%;
+
+    padding: 5px 10px;
+
+    background-color: yellow;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.food-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+#menu {
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+
+    background-color: #f5f5f5;
+}
+
+#menu .food-card {
+    width: 220px;
+    height: 160px;
+}
+
+
+footer {
+    background-color: darkgray;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: white;
+}

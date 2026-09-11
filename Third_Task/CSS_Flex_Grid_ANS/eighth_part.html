@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            color: rgb(139, 144, 149);
+            border: 1px solid black;
+            border-radius: 1.5;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .outer-row {
+            display: flex;
+            flex: 1;
+        }
+
+        .inner-column {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        header{
+            background-color: yellow;
+            height: 100px;
+            width: 100%;
+        }
+
+        aside {
+            background-color: brown;
+            width: 150px;
+        }
+
+        nav{
+            background-color: aqua;
+            height: 100px;
+        }
+
+        article{
+            background-color: cadetblue;
+            flex: 1;
+        }
+
+        footer{
+            background-color: rgb(42, 41, 41);
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <div class="outer-row">
+        <aside>aside</aside>
+        <div class="inner-column">
+            <nav>nav</nav>
+            <article>article</article>
+        </div>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>

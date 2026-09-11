@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            color: gray;
+        }
+
+        header, footer{
+            position: sticky;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header p, footer p{
+            display: inline-block
+        }
+
+        header p:nth-child(1), header p:nth-child(3),
+        footer p:nth-child(1), footer p:nth-child(3){
+            margin: 5px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        main img {
+            width: 350px;
+            height: 350px;
+        }
+
+        input{
+            width: 250px;
+        }
+
+        button {
+            margin: 3px;
+        }
+
+        footer {
+            margin-top: 20px;
+            background-color: #91909011;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <p>About</p>
+            <p>Store</p>
+        </div>
+        <div>
+            <p>Profile</p>
+            <p>Settings</p>
+        </div>
+    </header>
+    <main>
+        <img src="../assets/search_engine_logo.png" alt="logo">
+        <input type="text">
+        <div><button>Do the thing!</button>
+        <button>Do the other thing!</button></div>
+    </main>
+
+    <footer>
+        <div>
+          <p>advertising</p>
+           <p>Business</p>
+        </div>
+        <div>
+            <p>Privacy</p>
+            <p>Terms</p>
+        </div>
+    </footer>
+
+</body>
+</html>

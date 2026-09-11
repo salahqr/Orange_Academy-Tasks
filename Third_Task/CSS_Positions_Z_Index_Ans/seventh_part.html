@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+                
+        .second_part{
+            position: relative;
+            margin-top: 10px;
+            height: 285px;
+        }
+
+        .second_part > img{
+            border: 1px solid black;
+            border-radius: 1.5px;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        .second_part .one {
+            z-index: 5;
+        }
+
+        .second_part .two{
+            z-index: 2;
+            top: 25px;
+            left: 25px;
+        }
+
+        .second_part .three{
+            z-index: 3;
+            top: 55px;
+            left: 55px;
+        }
+
+        .second_part .four{
+            z-index: 4;
+            top: 85px;
+            left: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="second_part">
+        <img src="../assets/close_up_professional_food_photography_of_an_artisanal_gourmet_beef_burger_with.png" alt="image" class="one">
+        <img src="../assets/decadent_restaurant_dessert_warm_chocolate_lava_fondant_cake_with_molten_oozing.png" alt="image" class="two">
+        <img src="../assets/overhead_professional_food_photography_of_authentic_italian_neapolitan.png" alt="image" class="three">
+        <img src="../assets/vibrant_mediterranean_mezze_bowl_salad_with_crisp_cucumber_cherry_tomatoes.png" alt="image" class="four">
+    </div>
+</body>
+</html>

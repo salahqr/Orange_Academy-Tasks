@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            height: 400px;
+            gap: 5px;
+        }
+
+        .item {
+            margin: 0;
+            width: 50px;
+            height: 50px;
+            background-color: lightblue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 1 goes to the top */
+        .item1 {
+            align-self: flex-start;
+        }
+
+        /* 4 goes to the bottom */
+        .item4 {
+            align-self: center, center;
+        }
+
+        /* 5 goes to the center */
+        .item5 {
+            align-self: center,center;
+        }
+
+        /* 10 goes to the bottom */
+        .item10 {
+            align-self: flex-end, flex-start;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="item item1">1</p>
+        <p class="item">2</p>
+        <p class="item">3</p>
+        <p class="item item4">4</p>
+        <p class="item item5">5</p>
+        <p class="item">6</p>
+        <p class="item">7</p>
+        <p class="item">8</p>
+        <p class="item">9</p>
+        <p class="item item10">10</p>
+    </div>
+
+</body>
+
+</html>
