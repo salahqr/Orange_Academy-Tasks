@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./index.css">
+   
+
+  </head>
+  
+  <body data-bs-theme="dark">
+    <!-- Header -->
+    <header class="d-flex justify-content-between align-items-center sticky-top top-0 z-3 p-3 px-4">
+      <div class="fs-5 fw-bold text-center">Space<span class="text-secondary">Explorer</span></div>
+      <nav>
+        <ul class="d-flex gap-4 list-unstyled">
+          <li><a href="#planets" class="text-light text-light text-decoration-none Medium weight text. "
+             style="transition: color 0.2s ease;">Planets</a></li>
+          <li><a href="#bento" class="text-light text-light text-decoration-none Medium weight text. "
+             style="transition: color 0.2s ease;">Highlights</a></li>
+          <li><a href="#stats" class="text-light text-light text-decoration-none Medium weight text. "
+             style="transition: color 0.2s ease;">By the Numbers</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO: the animated intro -->
+      <!-- Floating orb and the floating text using CSS3 Animations, moving it using keyframes -->
+      <section class="hero position-relative text-center overflow-hidden ">
+        <div class="orb"></div>
+        <div class="hero-content">
+          <h1>Explore the Solar System</h1>
+          <p class="m-2 color: #c9c9e0">A visual tour of the planets, built to teach CSS Grid</p>
+          <a href="#planets" class="d-inline-block text-accent color: #fff px-2 px-3 rounded-2 text-decoration-none fw-bolder"
+          style="transition: transform 0.2s;">Begin the Tour</a>
+        </div>
+      </section>
+
+      <!-- the Planets Section -->
+      <!-- All the list of cars is arranged by Grid.
+        one rule on the container places every card into responsie column,   no floats, no flex hacks -->
+
+            
+      <section id="planets" class="p-2">
+        <h2 class="text-center text-secondary display-2">The Planets</h2>
+
+        <div class="planet-grid">
+          <article class="planet-card">
+            <div class="planet mercury"></div>
+            <h3 class="text-secondary mt-3 mb-0 mx-2">Mercury</h3>
+            <p class="fs-6 text-body-secondary">The smallest planet and the closes to the sun</p>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet venus"></div>
+            <h3>Venus</h3>
+            <p class="fs-6 text-body-secondary">The hottest planet, wrapped in thick clouds</p>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet earth"></div>
+            <h3>Earth</h3>
+            <p class="fs-6 text-body-secondary">Our home, the only known planet with life</p>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet mars"></div>
+            <h3>Mars</h3>
+            <p class="fs-6 text-body-secondary">The red planet, a target for future missions</p>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet jupiter"></div>
+            <h3>Jupiter</h3>
+            <p class="fs-6 text-body-secondary">The largets planet, a giant ball of gas</p>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet saturn"></div>
+            <h3>Saturn</h3>
+            <p class="fs-6 text-body-secondary">Famous for its bright, wide ring system.</p>
+          </article>
+        </div>
+      </section>
+
+
+      <!-- BENTO GRID -->
+      <!-- A seond grid that shows Grid's real power -->
+      <!-- item spanning, multiple columns and rows, to build a magazin-style layout -->
+      <section id="bento" class="p-2">
+        <h2 class="text-center text-secondary display-2">Mission Highlights</h2>
+
+        <div class="bento">
+          <!-- This one spans 2 columns and 2 rows, the big feature tile -->
+
+          <div class="bento-item feature">
+            <h3 class="mt-2">Deep Space</h3>
+            <p>Telescopes now see galaxies billions of years old</p>
+          </div>
+          <div class="bento-item">Rovers</div>
+          <div class="bento-item">Sattellites</div>
+          <!-- This one will span 2 columns, a wide banner tile on same row -->
+          <div class="bento-item wide">Launhc Systems</div>
+          <div class="bento-item">Stations</div>
+        </div>
+      </section>
+
+      <!-- STATS: a simple even grid -->
+      <section id="stats" class="text-center mx-auto container p-2">
+        <div class="row row-cols-2 row-cols-md-4 g-2">
+          <div class="col">
+            <div class="stat-cell rounded-3 p-3"><strong class="d-block fs-2 text-accent">8</strong><span>Planets</span></div>
+          </div>
+          <div class="col">
+            <div class="stat-cell rounded-3 p-3"><strong class="d-block fs-2 text-accent">200+</strong><span>Moons</span></div>
+          </div>
+          <div class="col">
+            <div class="stat-cell rounded-3 p-3"><strong class="d-block fs-2 text-accent">1</strong><span>Star</span></div>
+          </div>
+          <div class="col">
+            <div class="stat-cell rounded-3 p-3"><strong class="d-block fs-2 text-accent">4.6B</strong><span>Years Old</span></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center p-4 site-footer">
+      <p>Spaec Explorer, a CSS training demo</p>
+      <p>&copy; 2026</p>
+    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
+  </body>
+
+</html>

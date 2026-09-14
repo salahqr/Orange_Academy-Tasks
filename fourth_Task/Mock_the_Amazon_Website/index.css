@@ -1,0 +1,305 @@
+/* ===== RESET ===== */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(19, 19, 26);
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 8px 12px;
+    z-index: 5;
+}
+
+.top-header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.top-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.top-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.top-header img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.top-header .account img,
+button img {
+    height: 20px;
+    width: auto;
+}
+
+.deliver-to {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: aliceblue;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.search-form {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+}
+
+.search-form select {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    flex-shrink: 0;
+}
+
+.search-form input {
+    flex: 1;
+    min-width: 0;
+    border-radius: 0;
+    height: 100%;
+    font-size: 15px;
+}
+
+.search-form button {
+    border-radius: 0 4px 4px 0;
+    background-color: rgb(41, 41, 61);
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.account {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 12px;
+    line-height: 1.3;
+    white-space: nowrap;
+}
+
+.btn-returns,
+.btn-cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.top-header select,
+.top-header input,
+.top-header button {
+    background-color: transparent;
+    color: aliceblue;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 8px 10px;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.top-header select:hover,
+.top-header input:hover,
+.top-header button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ===== NAVIGATION ===== */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(41, 41, 61);
+    gap: 4px;
+    padding: 6px 8px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav ul a {
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+
+/* ===== HERO ===== */
+
+main .hero {
+    height: 220px;
+    background-color: rgb(111, 59, 59);
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main .hero button {
+    width: 36px;
+    height: 48px;
+    font-size: 18px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* ===== PRODUCT CARDS ===== */
+
+main .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
+    padding: 32px;
+}
+
+.card {
+    width: 100%;
+    max-width: 200px;
+    min-height: 220px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 2px black solid;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    max-width: 130px;
+    aspect-ratio: 4 / 3;
+    background-color: rgb(24, 23, 18);
+}
+
+.card h3 {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.card .price {
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-to-top {
+    text-align: center;
+    background-color: rgb(41, 41, 61);
+    color: aliceblue;
+    padding: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+    background-color: rgb(55, 55, 80);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: rgb(19, 19, 26);
+    color: aliceblue;
+    padding: 32px 16px;
+    gap: 24px;
+}
+
+.footer-links div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 140px;
+}
+
+.footer-links div ul li {
+    list-style: none;
+}
+
+.footer-links h3 {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    background-color: rgb(19, 19, 26);
+    color: aliceblue;
+}

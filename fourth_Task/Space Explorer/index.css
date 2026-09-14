@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Systme */
+  --primary: #6c5ce7; /*Branding main color*/
+  --secondary: #00cec9; /*Branding secondary color*/
+  --accent: #fd79a8; /*accent color is used for calls to action*/
+  --dark: #0d0d1a; /* Page background */
+  --light: #f4f4f8; /*Text on dark background */
+
+  /* Spacing scale for padding. One source of truth means every gap on the site follows the same rythem. */
+  --p-1: 8px; /*the variable name p-1 */
+  --p-2: 16px; /*the variable name p-2 */
+  --p-3: 32px; /*the variable name p-3 */
+
+  /* Spacing scale for margin */
+  --m-1: 8px;
+  --m-2: 16px;
+  --m-3: 32px;
+
+    /* to use in bootstrap*/
+  --bs-primary:var(--primary);
+  --bs-secondary:var(--secondary);
+  --bs-accent:var(--accent);
+  --bs-light:var(--light);
+}
+
+/* BASE */
+body {
+  font-family: "Segoe UI", arial, sans-serif;
+  background-color: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Movement B: face in and rise, played once on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* movement C: slow spin, used for the planets */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:hover {
+  transform: scale(1.05); /* grows slightly on hover */
+}
+
+/* HERO section */
+.hero {
+  padding: 100px var(--p-3);
+  background: radial-gradient(circle at top, #1a1a3a, var(--dark));
+}
+
+.orb {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--primary);
+  filter: blur(4px);
+  opacity: 0.6;
+  animation: float 4s ease-in-out infinite; /*infinite means runs forever*/
+}
+
+/* The text fades up once when the page loads */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease both;
+}
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: var(--m-2);
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--m-3);
+  max-width: 1100px;
+  margin: 0 auto;
+  
+}
+
+.planet-card {
+  background-color: rgba(42, 39, 39, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: var(--p-3);
+  text-align: center;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.planet-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary);
+  cursor: pointer;
+}
+
+.planet {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 9s linear infinite;
+}
+
+/* individual planet colors, build with gradients */
+
+.mercury {
+  background: radial-gradient(circle at 30% 30%, #b0b0b0, #6b6b6b);
+}
+.venus {
+  background: radial-gradient(circle at 30% 30%, #e8c07d, #a5762f);
+}
+.earth {
+  background: radial-gradient(circle at 30% 30%, #6ab7ff, #1e6b3a);
+}
+.mars {
+  background: radial-gradient(circle at 30% 30%, #ff8c66, #6b6b6b);
+}
+.jupiter {
+  background: radial-gradient(circle at 30% 30%, #e0b088, #9c6b3f);
+}
+.saturn {
+  background: radial-gradient(circle at 30% 30%, #f0d9a0, #b89b5e);
+}
+
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 120px;
+  gap: var(--p-2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bento-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: grid; /* grid also can be used to center content */
+  place-items: center; /* one line to center both axes */
+  padding: var(--p-2);
+  font-weight: 600;
+  color: var(--secondary);
+  transition: background-color 0.3s;
+}
+
+.bento-item:hover {
+  background-color: rgba(108, 92, 231, 0.25);
+}
+
+/* The feature tile takes a 2x2 block 
+"1/3" ,eams start at line 1, end at line 3
+*/
+.feature {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  text-align: center;
+}
+
+/* the wide tile spans 2 columns on a single row */
+.wide {
+  grid-column: 3/5;
+}
