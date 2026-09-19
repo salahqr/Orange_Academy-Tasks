@@ -68,10 +68,6 @@ header {
     border-color: aliceblue;
 }
 
-.search-input {
-    border-radius: 12px;
-    width: 80px;
-}
 
 .logo {
     height: 32px;
@@ -101,8 +97,8 @@ header {
 .search-form {
     display: flex;
     flex: 1;
-    min-width: 0;
-    height: 44px;
+    height: 35px;
+    width: 15px;
 }
 
 .search-form option {
@@ -118,8 +114,9 @@ header {
 .search-form input {
     flex: 1;
     min-width: 0;
-    border-radius: 0;
+    border-radius: 8px;
     height: 100%;
+    width: 100px;
     font-size: 15px;
 }
 
@@ -137,6 +134,7 @@ header {
 .search-form button:hover {
     background-color: #f3a847;
 }
+
 
 .account {
     display: flex;
@@ -161,7 +159,6 @@ header {
     background-color: transparent;
     color: aliceblue;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
     padding: 8px 10px;
     font-size: 14px;
     transition: background-color 0.2s ease;
